@@ -560,7 +560,7 @@ __END__
 
 =head1 AUTHOR
 
-Sean Zellmer E<lt>sean@lejeunerenarE<gt>
+Sean Zellmer E<lt>sean@lejeunerenard.comE<gt>
 
 =head1 COPYRIGHT
 
