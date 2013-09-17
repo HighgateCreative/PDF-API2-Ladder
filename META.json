@@ -47,6 +47,20 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/HighgateCross/PDF-API2-Ladder/issues"
+      },
+      "homepage" : "https://github.com/HighgateCross/PDF-API2-Ladder",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/HighgateCross/PDF-API2-Ladder.git",
+         "web" : "https://github.com/HighgateCross/PDF-API2-Ladder"
+      }
+   },
+   "version" : "0.01",
+   "x_contributors" : [
+      "Sean Zellmer <sean@lejeunerenard.com>"
+   ]
 }
 

@@ -13,6 +13,40 @@ BEGIN {
     use utf8;
 }
 
+=encoding utf-8
+
+=head1 NAME
+
+PDF::API2::Ladder - Creates PDFs a line at a time, much like the rungs on a ladder.
+
+=head1 SYNOPSIS
+
+  use PDF::API2::Ladder;
+
+  # Create a new PDF::Ladder Object
+  $pdf = PDF::Ladder->new(   font_size       => $font_size,
+                             lead            => $lead,
+                             font            => 'Georgia',
+                             show_margins    => $show_margins,
+                             margin_top      => .5/in,
+                             margin_bottom   => .5/in,
+                             line_height     => $line_height);
+
+  # Create a Rung at the top of the page (since its the first) that is center.
+  $pdf->add_rung("An Amazing Play", align  => 'center');
+  # Create a Rung underneath that, which is not centered
+  $pdf->add_rung("Actor1: 'To be or not 2 B. That is the answer!');
+
+=head1 DESCRIPTION
+
+PDF::API2::Ladder is a simplified way of creating PDFs using the awesome module PDF::API2. PDF::API2::Ladder builds PDFs in a top down fashion much like rungs on a ladder. The exception to the rung style is what is called a Blob. Blobs do not have a set height and adapt to their contents height instead. New pages are created automatically when a rung or blob goes off the end of the page.
+
+=head1 METHODS
+
+=over
+
+=cut
+
 sub new {
    my $class=shift(@_);
    my %opt=@_;
@@ -522,33 +556,7 @@ sub text_block {
 1;
 __END__
 
-=encoding utf-8
-
-=head1 NAME
-
-PDF::API2::Ladder - Creates PDFs a line at a time, much like the rungs on a ladder.
-
-=head1 SYNOPSIS
-
-  use PDF::API2::Ladder;
-
-  # Create a new PDF::Ladder Object
-  $pdf = PDF::Ladder->new(   font_size       => $font_size,
-                             lead            => $lead,
-                             font            => 'Georgia',
-                             show_margins    => $show_margins,
-                             margin_top      => .5/in,
-                             margin_bottom   => .5/in,
-                             line_height     => $line_height);
-
-  # Create a Rung at the top of the page (since its the first) that is center.
-  $pdf->add_rung("An Amazing Play", align  => 'center');
-  # Create a Rung underneath that, which is not centered
-  $pdf->add_rung("Actor1: 'To be or not 2 B. That is the answer!');
-
-=head1 DESCRIPTION
-
-PDF::API2::Ladder is a simplified way of creating PDFs using the awesome module PDF::API2. PDF::API2::Ladder builds PDFs in a top down fashion much like rungs on a ladder. The exception to the rung style is what is called a Blob. Blobs do not have a set height and adapt to their contents height instead. New pages are created automatically when a rung or blob goes off the end of the page.
+=back
 
 =head1 AUTHOR
 

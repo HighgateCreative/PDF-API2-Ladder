@@ -1,93 +1,3 @@
-- $pdf->add\_rung %opts
-
-Creates a new line in the PDF.
-
-__Example:__
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
-- $pdf->add\_blob %opts
-
-Creates a new set of lines with undetermined height in the PDF.
-
-__Example:__
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
-- $pdf->start\_new\_page %opts
-
-Ends current page PDF.
-
-__Example:__
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
-- $pdf->save %opts
-
-Saves out the PDF.
-
-__Example:__
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
-- $pdf->stringify %opts
-
-Saves out the PDF as string.
-
-__Example:__
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
 # NAME
 
 PDF::API2::Ladder - Creates PDFs a line at a time, much like the rungs on a ladder.
@@ -113,6 +23,98 @@ PDF::API2::Ladder - Creates PDFs a line at a time, much like the rungs on a ladd
 # DESCRIPTION
 
 PDF::API2::Ladder is a simplified way of creating PDFs using the awesome module PDF::API2. PDF::API2::Ladder builds PDFs in a top down fashion much like rungs on a ladder. The exception to the rung style is what is called a Blob. Blobs do not have a set height and adapt to their contents height instead. New pages are created automatically when a rung or blob goes off the end of the page.
+
+# METHODS
+
+- $pdf->add\_rung %opts
+
+    Creates a new line in the PDF.
+
+    __Example:__
+
+        $pdf = PDF::API2->new();
+        ...
+        print $pdf->stringify;
+
+        $pdf = PDF::API2->new();
+        ...
+        $pdf->saveas("our/new.pdf");
+
+        $pdf = PDF::API2->new(-file => 'our/new.pdf');
+        ...
+        $pdf->save;
+
+- $pdf->add\_blob %opts
+
+    Creates a new set of lines with undetermined height in the PDF.
+
+    __Example:__
+
+        $pdf = PDF::API2->new();
+        ...
+        print $pdf->stringify;
+
+        $pdf = PDF::API2->new();
+        ...
+        $pdf->saveas("our/new.pdf");
+
+        $pdf = PDF::API2->new(-file => 'our/new.pdf');
+        ...
+        $pdf->save;
+
+- $pdf->start\_new\_page %opts
+
+    Ends current page PDF.
+
+    __Example:__
+
+        $pdf = PDF::API2->new();
+        ...
+        print $pdf->stringify;
+
+        $pdf = PDF::API2->new();
+        ...
+        $pdf->saveas("our/new.pdf");
+
+        $pdf = PDF::API2->new(-file => 'our/new.pdf');
+        ...
+        $pdf->save;
+
+- $pdf->save %opts
+
+    Saves out the PDF.
+
+    __Example:__
+
+        $pdf = PDF::API2->new();
+        ...
+        print $pdf->stringify;
+
+        $pdf = PDF::API2->new();
+        ...
+        $pdf->saveas("our/new.pdf");
+
+        $pdf = PDF::API2->new(-file => 'our/new.pdf');
+        ...
+        $pdf->save;
+
+- $pdf->stringify %opts
+
+    Saves out the PDF as string.
+
+    __Example:__
+
+        $pdf = PDF::API2->new();
+        ...
+        print $pdf->stringify;
+
+        $pdf = PDF::API2->new();
+        ...
+        $pdf->saveas("our/new.pdf");
+
+        $pdf = PDF::API2->new(-file => 'our/new.pdf');
+        ...
+        $pdf->save;
 
 # AUTHOR
 
