@@ -2,7 +2,7 @@ package PDF::API2::Ladder;
 
 use strict;
 use 5.008_005;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 BEGIN {
     use PDF::API2;
