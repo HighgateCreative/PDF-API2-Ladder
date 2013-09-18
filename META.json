@@ -1,10 +1,10 @@
 {
    "abstract" : "Creates PDFs a line at a time, much like the rungs on a ladder.",
    "author" : [
-      "Sean Zellmer <sean@lejeunerenar>"
+      "Sean Zellmer <sean@lejeunerenard.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Milla version v1.0.4, Dist::Zilla version 4.300038, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Milla version v1.0.4, Dist::Zilla version 4.300038, CPAN::Meta::Converter version 2.131560",
    "license" : [
       "perl_5"
    ],
@@ -58,9 +58,6 @@
          "web" : "https://github.com/HighgateCross/PDF-API2-Ladder"
       }
    },
-   "version" : "0.01",
-   "x_contributors" : [
-      "Sean Zellmer <sean@lejeunerenard.com>"
-   ]
+   "version" : "0.01"
 }
 
