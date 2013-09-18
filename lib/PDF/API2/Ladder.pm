@@ -43,6 +43,8 @@ PDF::API2::Ladder is a simplified way of creating PDFs using the awesome module 
 
 =head1 METHODS
 
+   TODO
+
 =over
 
 =cut
@@ -119,25 +121,25 @@ sub new {
    return $self;
 }
 
-=item $pdf->add_rung %opts
-
-Creates a new line in the PDF.
-
-B<Example:>
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
-=cut
+#=item $pdf->add_rung %opts
+#
+#Creates a new line in the PDF.
+#
+#B<Example:>
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    print $pdf->stringify;
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    $pdf->saveas("our/new.pdf");
+#
+#    $pdf = PDF::API2->new(-file => 'our/new.pdf');
+#    ...
+#    $pdf->save;
+#
+#=cut
 sub add_rung {
    my $self=shift;
    my $text = shift;
@@ -188,25 +190,25 @@ sub add_rung {
    return 1;
 }
 
-=item $pdf->add_blob %opts
-
-Creates a new set of lines with undetermined height in the PDF.
-
-B<Example:>
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
-=cut
+#=item $pdf->add_blob %opts
+#
+#Creates a new set of lines with undetermined height in the PDF.
+#
+#B<Example:>
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    print $pdf->stringify;
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    $pdf->saveas("our/new.pdf");
+#
+#    $pdf = PDF::API2->new(-file => 'our/new.pdf');
+#    ...
+#    $pdf->save;
+#
+#=cut
 sub add_blob {
    my $self=shift;
    my $text = shift;
@@ -278,25 +280,25 @@ sub add_blob {
    return 1;
 }
 
-=item $pdf->start_new_page %opts
-
-Ends current page PDF.
-
-B<Example:>
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
-=cut
+#=item $pdf->start_new_page %opts
+#
+#Ends current page PDF.
+#
+#B<Example:>
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    print $pdf->stringify;
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    $pdf->saveas("our/new.pdf");
+#
+#    $pdf = PDF::API2->new(-file => 'our/new.pdf');
+#    ...
+#    $pdf->save;
+#
+#=cut
 sub start_new_page {
    my $self=shift;
    my %options = @_;
@@ -336,25 +338,25 @@ sub start_new_page {
    return 1;
 }
 
-=item $pdf->save %opts
-
-Saves out the PDF.
-
-B<Example:>
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
-=cut
+#=item $pdf->save %opts
+#
+#Saves out the PDF.
+#
+#B<Example:>
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    print $pdf->stringify;
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    $pdf->saveas("our/new.pdf");
+#
+#    $pdf = PDF::API2->new(-file => 'our/new.pdf');
+#    ...
+#    $pdf->save;
+#
+#=cut
 sub save {
    my $self=shift;
    my %options = @_;
@@ -365,25 +367,25 @@ sub save {
    return 1;
 }
 
-=item $pdf->stringify %opts
-
-Saves out the PDF as string.
-
-B<Example:>
-
-    $pdf = PDF::API2->new();
-    ...
-    print $pdf->stringify;
-
-    $pdf = PDF::API2->new();
-    ...
-    $pdf->saveas("our/new.pdf");
-
-    $pdf = PDF::API2->new(-file => 'our/new.pdf');
-    ...
-    $pdf->save;
-
-=cut
+#=item $pdf->stringify %opts
+#
+#Saves out the PDF as string.
+#
+#B<Example:>
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    print $pdf->stringify;
+#
+#    $pdf = PDF::API2->new();
+#    ...
+#    $pdf->saveas("our/new.pdf");
+#
+#    $pdf = PDF::API2->new(-file => 'our/new.pdf');
+#    ...
+#    $pdf->save;
+#
+#=cut
 sub stringify {
    my $self=shift;
    my %options = @_;
