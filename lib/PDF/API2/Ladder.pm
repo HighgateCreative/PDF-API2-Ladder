@@ -83,6 +83,7 @@ sub new {
    $self->{font_size} = ($opt{'font_size'}) ? $opt{'font_size'} : 12/pt;
    $self->{lead} = ($opt{'lead'}) ? $opt{'lead'} : 7/pt;
    $self->{font_color} = ($opt{'font_color'}) ? $opt{'font_color'} : 'black';
+   $self->{charspace} = (defined $opt{'charspace'}) ? $opt{'charspace'} : 0;
 
    # Setup
    if ($self->{file_name}) {
@@ -155,6 +156,7 @@ sub add_rung {
    my $fonts = ($options{'fonts'}) ? $options{'fonts'} : $self->{fonts};
    my $font = ($options{'font'}) ? $options{'font'} : $self->{font};
    my $font_color = ($options{'font_color'}) ? $options{'font_color'} : $self->{font_color};
+   my $charspace = (defined $options{'charspace'}) ? $options{'charspace'} : $self->{charspace};
 
    my $line_height = ($options{'line_height'}) ? $options{'line_height'} : $self->{line_height};
    my $lead = ($options{'lead'}) ? $options{'lead'} : $self->{lead};
@@ -174,6 +176,7 @@ sub add_rung {
 
    $text_element->font( $fonts->{$font}{$font_key}, $font_size );
    $text_element->fillcolor($font_color);
+   $text_element->charspace($charspace);
 
    my ( $endw, $ypos, $paragraph ) = text_block(
       $text_element,
@@ -222,6 +225,7 @@ sub add_blob {
    my $bold = ($options{'bold'}) ? 1 : 0;
    my $oblique = ($options{'oblique'}) ? 1 : 0;
    my $font_color = ($options{'font_color'}) ? $options{'font_color'} : $self->{font_color};
+   my $charspace = (defined $options{'charspace'}) ? $options{'charspace'} : $self->{charspace};
 
    my $line_height = ($options{'line_height'}) ? $options{'line_height'} : $self->{line_height};
    my $lead = ($options{'lead'}) ? $options{'lead'} : $self->{lead};
@@ -240,6 +244,7 @@ sub add_blob {
 
    $text_element->font( $fonts->{$font}{$font_key}, $self->{font_size} );
    $text_element->fillcolor($font_color);
+   $text_element->charspace($charspace);
 
    # Check to see if the next rung will fit 
    my ( $endw, $ypos, $paragraph ) = text_block(
